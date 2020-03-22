@@ -2,6 +2,7 @@
 
 .sections {
   .part {
+    font-size: 2rem;
     border-top: 1em solid $border-color;
     padding: 1rem 1rem 6rem 1rem;
 
@@ -59,7 +60,6 @@
         }
 
         .link {
-          color: #555;
           padding: 1.5rem;
           font-size: 4rem;
           display: inline-block;

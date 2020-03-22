@@ -5,6 +5,8 @@ import { InRange, In, Since, On } from './components/Date'
 import { Section, SectionItem, Sections } from './components/Section'
 import Me from './components/Me'
 import Contact from './components/Contact'
+import Study from './components/Study'
+import Intro from './components/Intro'
 import { SkillCategories, SkillCategory, Skill } from './components/Skills'
 
 const App = () => <div className="content">
@@ -68,6 +70,15 @@ const App = () => <div className="content">
             </p>}
             />
             <SectionItem
+                projectName="Plugin development for Wordpress"
+                date={<In month={new Date('2018-08')} />}
+                skills={['PHP', 'Wordpress', 'Woocommerce', 'JS', 'MySQL']}
+                description={<p>
+                    I had to make an emailing plugin for newsletters.
+                    I extended it with an invitation module that allows you to send a regular customer registration link.
+            </p>}
+            />
+            <SectionItem
                 projectName="Ecommerce for bikes"
                 date={<InRange from={new Date('2019-04-01')} to={new Date('2020-08-16')} />}
                 skills={['PHP', 'Wordpress', 'Woocommerce', 'MySQL', 'SCSS', 'JS']}
@@ -78,15 +89,6 @@ const App = () => <div className="content">
                     It was an excellent lesson for me that changed the way I think.
                     I started evaluating rapid prototyping, requirement planning, and other project sub-tasks that might help to avoid this failure.
                     By the way, I made "Argep.hu", "Aurkereso.hu" integeration, <code>CSV</code> file importer, shipping cost calculator, etc...
-            </p>}
-            />
-            <SectionItem
-                projectName="Plugin development for Wordpress"
-                date={<In month={new Date('2018-08')} />}
-                skills={['PHP', 'Wordpress', 'Woocommerce', 'JS', 'MySQL']}
-                description={<p>
-                    I had to make an emailing plugin for newsletters.
-                    I extended it with an invitation module that allows you to send a regular customer registration link.
             </p>}
             />
             <SectionItem
@@ -238,11 +240,12 @@ const App = () => <div className="content">
             <SkillCategories>
                 <SkillCategory title="Programming languages:">
                     <Skill level={10 / 10} title="JS" />
-                    <Skill level={10 / 10} title="PHP" />
                     <Skill level={10 / 10} title="TS" />
+                    <Skill level={10 / 10} title="PHP" />
                     <Skill level={8 / 10} title="Python" />
                     <Skill level={8 / 10} title="Rust" />
                     <Skill level={8 / 10} title="SQL" />
+                    <Skill level={5 / 10} title="GraphQL" />
                     <Skill level={8 / 10} title="Bash" />
                     <Skill level={7 / 10} title="Elixir" />
                     <Skill level={7 / 10} title="Java" />
@@ -254,7 +257,7 @@ const App = () => <div className="content">
                     <Skill level={10 / 10} title="CSS, SCSS" />
                     <Skill level={10 / 10} title="JSON, YML, TOML" />
                 </SkillCategory>
-                <SkillCategory title="Technolgies:">
+                <SkillCategory title="Libraries that worth to mention:">
                     <Skill level={10 / 10} title="React" />
                     <Skill level={9 / 10} title="VueJS" />
                     
@@ -262,7 +265,6 @@ const App = () => <div className="content">
                     <Skill level={9 / 10} title="Jest" />
 
                     <Skill level={10 / 10} title="NodeJS" />
-                    <Skill level={5 / 10} title="GraphQL" />
                     <Skill level={5 / 10} title="Apollo" />
 
                     <Skill level={7 / 10} title="Laravel" />
@@ -282,13 +284,13 @@ const App = () => <div className="content">
                     <Skill level={3 / 10} title="JQuery" />
                 </SkillCategory>
                 <SkillCategory title="DevOps:">
-                    <Skill level={5 / 10} title="Gitlab CI" />
+                    <Skill level={5 / 10} title="CI/CD" />
                     <Skill level={8 / 10} title="GNU" />
                     <Skill level={8 / 10} title="Linux" />
                     <Skill level={8 / 10} title="Docker, docker-compose" />
                 </SkillCategory>
                 <SkillCategory title="Others:">
-                    <Skill level={10 / 10} title="Objectum Oriented Programming (OOP)" />
+                    <Skill level={10 / 10} title="Object Oriented Programming (OOP)" />
                     <Skill level={10 / 10} title="Functional Programming (FP)" />
                     <Skill level={10 / 10} title="Design patterns (SOLID, DRY, and much more)" />
                     <Skill level={3 / 10} title="Data science" />
@@ -300,7 +302,18 @@ const App = () => <div className="content">
                     <Skill level={6 / 10} title="Inkscape" />
                     <Skill level={6 / 10} title="Gravit designer" />
                 </SkillCategory>
+                <SkillCategory title="Human languages">
+                    <Skill level={10 / 10} title="Hungarian" />
+                    <Skill level={8 / 10} title="Written English" />
+                    <Skill level={4 / 10} title="Verbal English" />
+                </SkillCategory>
             </SkillCategories>
+        </Section>
+        <Section title="Study">
+            <Study />
+        </Section>
+        <Section title="Introduction">
+            <Intro />
         </Section>
         <Section title="Contact">
             <Contact

@@ -7,8 +7,7 @@
             align-content: space-around;
             .skill {
                 margin:0.1em;
-                white-space: nowrap;
-                flex:1;
+                flex:auto;
                 padding:1rem;
                 border: 1px solid black;
             }
