@@ -1,0 +1,192 @@
+@import "../variables.scss";
+
+.sections {
+  .part {
+    border-top: 1em solid $border-color;
+    padding: 1rem 1rem 6rem 1rem;
+
+    &:hover {
+      article {
+        opacity: 0.3;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 3rem;
+      transition: color 1s;
+      text-align: center;
+    }
+
+    article {
+      padding: 0 30rem 0 30rem;
+      transition: opacity 0.3s;
+      opacity: 1;
+
+      h3 {
+        margin-bottom: 0;
+        font-size: 2rem;
+        font-weight: normal;
+
+        .project {
+          font-weight: bold;
+        }
+
+        .provider {
+          transition: color 0.2s;
+        }
+      }
+
+      .floating-container {
+        $floating-size: 20rem;
+        width: $floating-size;
+        transform: rotate(2deg);
+        opacity: 0;
+        position: absolute;
+        margin-top: -1.5rem;
+        margin-left: calc(0rem - #{$floating-size} - 5rem);
+        font-family: serif;
+        white-space: nowrap;
+        text-align: right;
+
+        .date {
+          font-size: 1.5rem;
+          display: block;
+          transform: rotate(2deg);
+        }
+
+        .link {
+          color: #555;
+          padding: 1.5rem;
+          font-size: 4rem;
+          display: inline-block;
+          transform: rotate(-10deg);
+        }
+      }
+
+      @media screen and (max-width: $break-large) {
+        padding: 0 1rem 0 1rem;
+
+        .floating-container {
+          opacity: 1;
+          width: auto;
+          transform: none;
+          position: relative;
+          margin-top: 0;
+          margin-left: 0;
+          text-align: left;
+          .date,
+          .link {
+            transform: none;
+          }
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+        .floating-container {
+          opacity: 1;
+          .link {
+            animation: github 1s linear infinite;
+            @keyframes github {
+              0% {
+                transform: rotate(-10deg);
+              }
+              100% {
+                transform: rotate(-370deg);
+              }
+            }
+          }
+        }
+      }
+
+      .skills span {
+        font-weight: bold;
+        display: inline-block;
+        font-size: 1rem;
+        padding: 0.23em 1em;
+        border-radius: 0.3em;
+        margin-right: 0.3em;
+        margin-bottom: 0.3em;
+
+        transition: background-color 0.1s;
+      }
+
+      .description p {
+        margin-top: 0.1em;
+        font-size: 1.5rem;
+      }
+    }
+
+    &:nth-child(odd) {
+      background: $primary-bg;
+      color: $primary-fg-color;
+      article:hover {
+        .skills span {
+          background: $primary-fg-active-color;
+        }
+
+        h2 .provider {
+          color: $primary-fg-active-color;
+        }
+      }
+
+      h2 {
+        color: $primary-fg-inactive-color;
+      }
+
+      &:hover h2 {
+        color: $primary-fg-active-color;
+      }
+
+      .date,
+      .link {
+        color: $primary-fg-inactive-color;
+      }
+
+      article {
+        .skills span {
+          background: $primary-badge-bg;
+          color: $primary-badge-fg-color;
+        }
+      }
+    }
+
+    &:nth-child(even)  {
+      background: $secondary-bg;
+      color: $secondary-fg-color;
+      article:hover {
+        .skills span {
+          background: $secondary-fg-active-color;
+        }
+
+        h2 .provider {
+          color: $secondary-fg-active-color;
+        }
+      }
+
+      h2 {
+        color: $secondary-fg-inactive-color;
+      }
+
+      &:hover h2 {
+        color: $secondary-fg-active-color;
+      }
+
+      .date,
+      .link {
+        color: $secondary-fg-inactive-color;
+      }
+
+      article {
+        .skills span {
+          background: $secondary-badge-bg;
+          color: $secondary-badge-fg-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.skill-categories {
+    font-size: 2rem;
+    .category {
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            .skill {
+                margin:0.1em;
+                white-space: nowrap;
+                flex:1;
+                padding:1rem;
+                border: 1px solid black;
+            }
+        }
+    }
+}

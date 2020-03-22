@@ -1,0 +1,24 @@
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0; 
+  padding: 0;
+  font-size: 12px;
+
+  @media screen and (max-width: $break-small) {
+    font-size: 8px;
+  }
+  @media screen and (max-width: $break-xsmall) {
+    font-size: 6px;
+  }
+  font-family: furamono;
+}
+
+@font-face {
+  font-family: furamono;
+  src: url(./fonts/FuraMono.otf);
+}
