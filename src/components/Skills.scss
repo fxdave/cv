@@ -1,5 +1,13 @@
+@import '../variables.scss';
+
 .skill-categories {
     font-size: 2rem;
+    padding: 0 30rem 0 30rem;
+
+    @media screen and (max-width: $break-large) {
+        padding: 0 1rem 0 1rem;
+    }
+
     .category {
         .skills {
             display: flex;

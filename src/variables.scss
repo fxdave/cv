@@ -4,22 +4,6 @@ $break-xsmall: 350px;
 /*
 $primary-bg: #2b3d46 url(../images/noise.png);
 $primary-fg-active-color: #f76868;
-$primary-fg-inactive-color: #ffffff7e;
-$primary-fg-color: #fff;
-$primary-badge-fg-color: #fff;
-$primary-badge-bg: #00000030;
-
-$secondary-bg: #efefef;
-$secondary-fg-active-color: #f76868;
-$secondary-fg-inactive-color: #0000005e;
-$secondary-fg-color: #000;
-$secondary-badge-fg-color: #000;
-$secondary-badge-bg: #00000030;
-*/
-
-
-$primary-bg: #2b3d46 url(../images/noise.png);
-$primary-fg-active-color: #f76868;
 $primary-fg-inactive-color: #fff;
 $primary-fg-color: #fff;
 $primary-badge-fg-color: #fff;
@@ -33,3 +17,20 @@ $secondary-badge-fg-color: #000;
 $secondary-badge-bg: #00000030;
 
 $border-color: #212e36;
+*/
+
+$primary-bg: rgb(17, 3, 0) url(../images/noise.png);
+$primary-fg-active-color: #f76868;
+$primary-fg-inactive-color: #fff;
+$primary-fg-color: #fff;
+$primary-badge-fg-color: #fff;
+$primary-badge-bg: #00000030;
+
+$secondary-bg: #efefef;
+$secondary-fg-active-color: #f76868;
+$secondary-fg-inactive-color: #000;
+$secondary-fg-color: #000;
+$secondary-badge-fg-color: #000;
+$secondary-badge-bg: #00000030;
+
+$border-color: #2a150e;

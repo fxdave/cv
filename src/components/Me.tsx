@@ -20,15 +20,18 @@ export default () => {
         })
     }
 
-    return <section className="me" onClick={handleClick} ref={me}>
-        <div
-            id="gl"
-            data-imageoriginal={img}
-            data-imagedepth={imgMap}
-            data-horizontalthreshold="30"
-            data-verticalthreshold="30"
-        />
+    return <>
+        <section className="me" onClick={handleClick} ref={me}>
+            <div
+                id="gl"
+                data-imageoriginal={img}
+                data-imagedepth={imgMap}
+                data-horizontalthreshold="30"
+                data-verticalthreshold="30"
+            />
 
-        <h1> <span>David Biro</span> Full-stack Web developer </h1>
-    </section>
+            <h1> <span>David Biro</span> Full-stack Web developer </h1>
+        </section>
+        <div className="line"></div>
+    </>
 }

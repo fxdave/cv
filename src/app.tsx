@@ -257,7 +257,7 @@ const App = () => <div className="content">
                     <Skill level={10 / 10} title="CSS, SCSS" />
                     <Skill level={10 / 10} title="JSON, YML, TOML" />
                 </SkillCategory>
-                <SkillCategory title="Libraries that worth to mention:">
+                <SkillCategory title="Other:">
                     <Skill level={10 / 10} title="React" />
                     <Skill level={9 / 10} title="VueJS" />
                     
@@ -289,7 +289,7 @@ const App = () => <div className="content">
                     <Skill level={8 / 10} title="Linux" />
                     <Skill level={8 / 10} title="Docker, docker-compose" />
                 </SkillCategory>
-                <SkillCategory title="Others:">
+                <SkillCategory title="Theory:">
                     <Skill level={10 / 10} title="Object Oriented Programming (OOP)" />
                     <Skill level={10 / 10} title="Functional Programming (FP)" />
                     <Skill level={10 / 10} title="Design patterns (SOLID, DRY, and much more)" />
