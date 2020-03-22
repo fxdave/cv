@@ -5,13 +5,12 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -19,22 +18,19 @@ jobs:
         node-version: [10.x, 12.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build --if-present
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run build --if-present
 
-    - run:
-      name: Install and configure dependencies
-      command: |
-        npm install -g --silent gh-pages@2.0.1
-        git config user.email "ci-build@klukas.net"
-        git config user.name "ci-build"
-    - run:
-      name: Deploy docs to gh-pages branch
-      command: gh-pages --dist docs/_build/html
-      env:
-        CI: true
+      - run: |
+          npm install -g --silent gh-pages@2.0.1
+          git config user.email "ci-build@klukas.net"
+          git config user.name "ci-build"
+      - run: |
+          gh-pages --dist docs/_build/html
+        env:
+          CI: true
