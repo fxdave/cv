@@ -29,6 +29,6 @@ export default () => {
             data-verticalthreshold="30"
         />
 
-        <h1> David Biro &middot; Fullstack Web developer </h1>
+        <h1> <span>David Biro</span> Full-stack Web developer </h1>
     </section>
 }
