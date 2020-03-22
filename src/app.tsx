@@ -146,7 +146,7 @@ const App = () => <div className="content">
                     It is a hobby project. I wanted to make a good launcher for tiling window managers for Linux.
                     I implemented fuzzy search with <code>Rust</code> and used <code>FFI</code> to call it from a react frontend.
                     This way, I improved its performance hugely.
-                    Currently, I am rewritting this clearly with <code>Rust</code>.
+                    Currently, I am rewriting this clearly with <code>Rust</code>.
             </p>}
             />
             <SectionItem
