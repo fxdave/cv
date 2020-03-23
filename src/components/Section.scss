@@ -5,6 +5,7 @@
     font-size: 2rem;
     border-top: 1em solid $border-color;
     padding: 1rem 1rem 6rem 1rem;
+    page-break-inside: avoid;
 
     &:hover {
       article {
@@ -68,6 +69,24 @@
       }
 
       @media screen and (max-width: $break-large) {
+        padding: 0 1rem 0 1rem;
+
+        .floating-container {
+          opacity: 1;
+          width: auto;
+          transform: none;
+          position: relative;
+          margin-top: 0;
+          margin-left: 0;
+          text-align: left;
+          .date,
+          .link {
+            transform: none;
+          }
+        }
+      }
+
+      @media print {
         padding: 0 1rem 0 1rem;
 
         .floating-container {

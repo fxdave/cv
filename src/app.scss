@@ -15,6 +15,9 @@ body, html {
   @media screen and (max-width: $break-xsmall) {
     font-size: 6px;
   }
+  @media print {
+    font-size: 6px;
+  }
   font-family: furamono;
 }
 

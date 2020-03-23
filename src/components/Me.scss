@@ -26,6 +26,11 @@
       font-size: 3rem;
       top: 32vw;
     }
+
+    @media print {
+      font-size: 3rem;
+      top: 32vw;
+    }
   }
 
 }
