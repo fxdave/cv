@@ -50,8 +50,21 @@
   width: 100%;
   height: 67vw;
   overflow: hidden;
+
+  @media screen {
+    canvas {
+      display: block;
+    }
+  }
+
+  @media print {
+    width: 210mm;
+    height: 297mm;
+    background: url(../images/me.jpg) center center;
+    background-size: auto 100%;
+    canvas {
+      display: none;
+    }
+  }
 }
 
-canvas {
-  display: block;
-}

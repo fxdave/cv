@@ -5,13 +5,16 @@
   "main": "dist/app.js",
   "scripts": {
     "dev": "parcel src/index.html --host 0.0.0.0",
-    "build": "parcel build src/index.html --public-url ."
+    "build": "parcel build src/index.html --public-url .",
+    "makePdf": "node ./scripts/makePdf.js"
   },
   "author": "David Biro",
   "license": "MIT",
   "devDependencies": {
     "parcel": "^1.12.4",
+    "puppeteer": "^2.1.1",
     "sass": "^1.26.2",
+    "serve": "^11.3.0",
     "typescript": "^3.8.3"
   },
   "dependencies": {
