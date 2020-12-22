@@ -1,8 +1,8 @@
 import "./Me.scss";
 import React from "react";
 
-import img from "../images/me.jpg";
-import imgMap from "../images/me_depth.jpg";
+import img from "url:../images/me.jpg";
+import imgMap from "url:../images/me_depth.jpg";
 
 export default () => {
     React.useEffect(() => {

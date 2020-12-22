@@ -16,6 +16,27 @@ const App = () => (
             <Page>
                 <Section title="Experiences / Jobs" primary>
                     <SectionItem
+                        projectName="Mobile application for a safety clothing webshop"
+                        at="Stylers Kft."
+                        date={<InRange from={new Date("2020-12-01")} />}
+                        skills={[
+                            "Nuxt",
+                            "PWA",
+                            "Ionic framework",
+                            "Cordova",
+                            "CapacitorJs",
+                            "Android",
+                            "iOS",
+                            "Gitlab CI",
+                            "OneSignal (Push notifications)"
+                        ]}
+                        description={
+                            <p>
+                                There was a website that I had to transform into a mobile application.
+                            </p>
+                        }
+                    />
+                    <SectionItem
                         projectName="Pylon utilization software for ELMŰ"
                         at="Stylers Kft."
                         date={<InRange from={new Date("2020-04-01")} />}
@@ -284,7 +305,100 @@ const App = () => (
                 </Section>
             </Page>
             <Page>
+                <Section title="Pull requests this year">
+                    <SectionItem
+                        projectName="alacritty: Non-VI mode selections"
+                        link="https://github.com/alacritty/alacritty/pull/4522"
+                        linkStyle={{
+                            animationDuration: "0s",
+                        }}
+                        date={<On date={new Date("2020-12-06")} />}
+                        skills={["Rust", "Terminal emulators"]}
+                        description={
+                            <p>
+                                I added new actions to the alacritty terminal emulator.
+                                Unfortunately the author valuated the VI mode more than quick action shortcuts, so the PR was not accepted.
+                            </p>
+                        }
+                    />
+                    <SectionItem
+                        projectName="tldr: xephyr: add page"
+                        link="https://github.com/tldr-pages/tldr/pull/4365"
+                        linkStyle={{
+                            animationDuration: "0s",
+                        }}
+                        date={<On date={new Date("2020-09-30")} />}
+                        skills={["Markdown"]}
+                        description={ <p> I added a new tldr page for Xephyr virtual X11 server. </p> }
+                    />
+                    <SectionItem
+                        projectName="theme-bobthefish: Add prompt size limiting options"
+                        link="https://github.com/oh-my-fish/theme-bobthefish/pull/272"
+                        linkStyle={{
+                            animationDuration: "0s",
+                        }}
+                        date={<On date={new Date("2020-09-27")} />}
+                        skills={["Fish shell"]}
+                        description={ <p> I fixed an annoying issue with a prompt theme. </p> }
+                    />
+                    <SectionItem
+                        projectName="vue-affix: Add width-reference-selector option"
+                        link="https://github.com/eddiemf/vue-affix/pull/59"
+                        linkStyle={{
+                            animationDuration: "0s",
+                        }}
+                        date={<On date={new Date("2020-09-25")} />}
+                        skills={["Vue", "JS"]}
+                        description={ <p> I enhanced the usage of a Vue library. </p> }
+                    />
+                </Section>
+                <Section title="Workshops I made" primary>
+                    <SectionItem
+                        projectName="CSS Preprocessors"
+                        date={<On date={new Date("2020-10-13")} />}
+                        skills={["React", "Sass", "CSS naming conventions"]}
+                        description={<p></p>}
+                    />
+                    <SectionItem
+                        projectName="Networks and Webservers"
+                        date={<On date={new Date("2020-08-18")} />}
+                        skills={["Networks", "Linux", "Nginx", "Apache", "REST"]}
+                        description={<p></p>}
+                    />
+                </Section>
+            </Page>
+            <Page>
                 <Section title="Experiences / My Projects">
+                    <SectionItem
+                        projectName="ascii-snake-rs"
+                        link="https://github.com/fxdave/ascii-snake-rs"
+                        linkStyle={{
+                            animationDuration: "6s",
+                        }}
+                        date={<In month={new Date("2020-11-01")} />}
+                        skills={["Rust", "Terminal emulators", "Multi-threading"]}
+                        description={
+                            <p>
+                                A terminal based snake.
+                                It was a case study of how to write maintainable code in rust.
+                            </p>
+                        }
+                    />
+                    <SectionItem
+                        projectName="simple-clock-rs"
+                        link="https://github.com/fxdave/simple-clock-rs"
+                        linkStyle={{
+                            animationDuration: "6s",
+                        }}
+                        date={<In month={new Date("2020-03-01")} />}
+                        skills={["Rust", "X.Org"]}
+                        description={
+                            <p>
+                                An X11 window with a digital clock.
+                                It was a case study of how is it possible to simplify xcb.
+                            </p>
+                        }
+                    />
                     <SectionItem
                         projectName="Vonal"
                         link="https://github.com/vonal-project"
