@@ -2,7 +2,7 @@ import "./Me.scss";
 import React from "react";
 
 import img from "url:../images/me.jpg";
-import imgMap from "url:../images/me_depth.jpg";
+import imgMap from "url:../images/me_depth.png";
 
 export default () => {
     React.useEffect(() => {
@@ -34,7 +34,6 @@ export default () => {
                     <span>David Biro</span> Full-stack Web developer{" "}
                 </h1>
             </section>
-            <div className="line"></div>
         </>
     );
 };
