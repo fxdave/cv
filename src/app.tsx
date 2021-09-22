@@ -16,6 +16,31 @@ const App = () => (
             <Page>
                 <Section title="Experiences / Jobs" primary>
                     <SectionItem
+                        projectName="Concept Designer Software"
+                        at="RolloutIt Kft."
+                        date={<InRange from={new Date("2021-02-07")} />}
+                        skills={[
+                            "Rust",
+                            "WebAssembly",
+                            "React",
+                            "Styled-components",
+                            "Prosemirror",
+                            "Webpack",
+                            "SCSS",
+                            "SVG",
+                            "Docker",
+                            "Nginx"
+                        ]}
+                        description={
+                            <p>
+                                My task is to port a PC application, to the web for a French startup.
+                                The most of the code if written in Rust,
+                                as it has some calculations that is quite compute intense,
+                                and the UI has to be quick and snappy.
+                            </p>
+                        }
+                    />
+                    <SectionItem
                         projectName="Mobile application for a safety clothing webshop"
                         at="Stylers Kft."
                         date={<InRange from={new Date("2020-12-01")} />}
