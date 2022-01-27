@@ -18,7 +18,7 @@ const App = () => (
                     <SectionItem
                         projectName="Concept Designer Software"
                         at="RolloutIt Kft."
-                        date={<InRange from={new Date("2021-02-07")} />}
+                        date={<InRange from={new Date("2021-02-07")} to={new Date("2021-12-31")} />}
                         skills={[
                             "Rust",
                             "WebAssembly",
@@ -33,7 +33,7 @@ const App = () => (
                         ]}
                         description={
                             <p>
-                                My task is to port a PC application, to the web for a French startup.
+                                My task was to port a PC application, to the web for a French startup.
                                 The most of the code if written in Rust,
                                 as it has some calculations that is quite compute intense,
                                 and the UI has to be quick and snappy.
