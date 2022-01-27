@@ -43,7 +43,7 @@ const App = () => (
                     <SectionItem
                         projectName="Mobile application for a safety clothing webshop"
                         at="Stylers Kft."
-                        date={<InRange from={new Date("2020-12-01")} />}
+                        date={<InRange from={new Date("2020-12-01")} to={new Date("2021-10-27")} />}
                         skills={[
                             "Nuxt",
                             "PWA",
