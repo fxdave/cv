@@ -8,14 +8,16 @@
       display: flex;
       flex-flow: column;
 
-      & > * {
+      &>* {
         flex: auto;
       }
-      & > .flex-0 {
+
+      &>.flex-0 {
         flex: 0;
       }
     }
   }
+
   .part {
     font-size: 2rem;
     border-top: 1em solid $border-color;
@@ -70,7 +72,7 @@
         text-align: right;
 
         @media print {
-          float:right;
+          float: right;
         }
 
         .date {
@@ -102,6 +104,7 @@
           margin-top: 0;
           margin-left: 0;
           text-align: left;
+
           .date,
           .link {
             transform: none;
@@ -120,6 +123,7 @@
           margin-top: 0;
           margin-left: 0;
           text-align: left;
+
           .date,
           .link {
             transform: none;
@@ -129,14 +133,18 @@
 
       &:hover {
         opacity: 1;
+
         .floating-container {
           opacity: 1;
+
           .link {
             animation: github 1s linear infinite;
+
             @keyframes github {
               0% {
                 transform: rotate(-10deg);
               }
+
               100% {
                 transform: rotate(-370deg);
               }
@@ -161,11 +169,16 @@
         margin-top: 0.1em;
         font-size: 1.5rem;
       }
+
+      & a {
+        color: #f76868,
+      }
     }
 
     &.primary {
       background: $primary-bg;
       color: $primary-fg-color;
+
       article:hover {
         .skills span {
           background: $primary-fg-active-color;
@@ -207,9 +220,10 @@
       }
     }
 
-    &.secondary  {
+    &.secondary {
       background: $secondary-bg;
       color: $secondary-fg-color;
+
       article:hover {
         .skills span {
           background: $secondary-fg-active-color;

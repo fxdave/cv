@@ -16,6 +16,82 @@ const App = () => (
             <Page>
                 <Section title="Experiences / Jobs" primary>
                     <SectionItem
+                        projectName="Building permit tracker for San Francisco"
+                        at="RolloutIt Kft."
+                        date={<Since date={new Date("2023-08-22")} />}
+                        skills={["React", "NodeJs", "Firestore", "Google Cloud Run", "Docker", "Cuple", "Styled-components"]}
+                        description={
+                            <p>
+                                I was a DevOps in this project at first, but later I got joined to the other developer.
+                                We rewrote it while we extended it with violation tracking.
+                            </p>
+                        }
+                    />
+                    <SectionItem
+                        projectName="Reverse Auction Plugin for Shopify"
+                        at="RolloutIt Kft."
+                        date={<InRange from={new Date("2023-02-30")} to={new Date("2024-01-15")} />}
+                        skills={["Shopify", "React", "NodeJs", "Firestore", "Google Cloud Run", "Docker", "Rust", "Styled-components"]}
+                        description={
+                            <p>
+                                I was alone in this project.
+                                RolloutIt got this project with an existing codebase. It was horrible.
+
+                                Really, Really horrible.
+                                I have never seen something like this.
+                                It's so bad that I worked on this for a year and that's the first thing I remember.
+
+                                By now, mostly it's rewritten, and managable.
+                                I fixed many bugs, but I also added new features like:<br />
+                                - Multicurrency support<br />
+                                - Auto draft order sending<br />
+                                - CSV import<br />
+                            </p>
+                        }
+                    />
+                    <SectionItem
+                        projectName="B2B webshop for hardware wholesale"
+                        at="RolloutIt Kft."
+                        date={<InRange from={new Date("2022-12-13")} to={new Date("2023-02-07")} />}
+                        skills={["NodeJs", "React", "tRPC", "NAV (Hungarian tax authority)", "MongoDB", "Docker"]}
+                        description={
+                            <p>
+                                Nothing interesting... Other than I tried tRPC, but it had some issues,
+                                so I created my alternative: <a href="https://github.com/fxdave/cuple">Cuple RPC</a>.
+                                (Well after this project though.)
+                            </p>
+                        }
+                    />
+                    <SectionItem
+                        projectName="WEB 3.0 site for StrongNode"
+                        at="RolloutIt Kft."
+                        date={<InRange from={new Date("2022-02-01")} to={new Date("2022-12-01")} />}
+                        skills={[
+                            "NodeJs",
+                            "Rust",
+                            "React",
+                            "Styled-components",
+                            "Webpack",
+                            "Docker",
+                            "Nginx",
+                            "Redis",
+                            "AWS SES",
+                            "AWS Rekognition",
+                            "Mailjet",
+                            "Websockets"
+                        ]}
+                        description={
+                            <p>
+                                We were 3 full-stack developers in the team. Here are some interesting modules that I made here:<br />
+                                - KYC (passport verification with face recognition).<br />
+                                - Authentication with magic link<br />
+                                - In-memory Usage limiter service (with Rust) to balance the load of 10+ backend instances<br />
+                                - Avatar upload from your phone to your desktop browser<br />
+                                - API typesharing between backend and frontend, which later inspired my project <a href="https://github.com/fxdave/cuple">Cuple</a>.<br />
+                            </p>
+                        }
+                    />
+                    <SectionItem
                         projectName="Concept Designer Software"
                         at="RolloutIt Kft."
                         date={<InRange from={new Date("2021-02-07")} to={new Date("2021-12-31")} />}
@@ -330,51 +406,11 @@ const App = () => (
                 </Section>
             </Page>
             <Page>
-                <Section title="Pull requests this year">
+                <Section title="Open Source Contributions">
                     <SectionItem
-                        projectName="alacritty: Non-VI mode selections"
-                        link="https://github.com/alacritty/alacritty/pull/4522"
-                        linkStyle={{
-                            animationDuration: "0s",
-                        }}
-                        date={<On date={new Date("2020-12-06")} />}
-                        skills={["Rust", "Terminal emulators"]}
-                        description={
-                            <p>
-                                I added new actions to the alacritty terminal emulator.
-                                Unfortunately the author valuated the VI mode more than quick action shortcuts, so the PR was not accepted.
-                            </p>
-                        }
-                    />
-                    <SectionItem
-                        projectName="tldr: xephyr: add page"
-                        link="https://github.com/tldr-pages/tldr/pull/4365"
-                        linkStyle={{
-                            animationDuration: "0s",
-                        }}
-                        date={<On date={new Date("2020-09-30")} />}
-                        skills={["Markdown"]}
-                        description={ <p> I added a new tldr page for Xephyr virtual X11 server. </p> }
-                    />
-                    <SectionItem
-                        projectName="theme-bobthefish: Add prompt size limiting options"
-                        link="https://github.com/oh-my-fish/theme-bobthefish/pull/272"
-                        linkStyle={{
-                            animationDuration: "0s",
-                        }}
-                        date={<On date={new Date("2020-09-27")} />}
-                        skills={["Fish shell"]}
-                        description={ <p> I fixed an annoying issue with a prompt theme. </p> }
-                    />
-                    <SectionItem
-                        projectName="vue-affix: Add width-reference-selector option"
-                        link="https://github.com/eddiemf/vue-affix/pull/59"
-                        linkStyle={{
-                            animationDuration: "0s",
-                        }}
-                        date={<On date={new Date("2020-09-25")} />}
-                        skills={["Vue", "JS"]}
-                        description={ <p> I enhanced the usage of a Vue library. </p> }
+                        projectName={<>There's a lot actually. Check my <a href="https://github.com/fxdave">Github</a>!</>}
+                        date={<></>}
+                        description={<></>}
                     />
                 </Section>
                 <Section title="Workshops I made" primary>
@@ -394,6 +430,53 @@ const App = () => (
             </Page>
             <Page>
                 <Section title="Experiences / My Projects">
+                    <SectionItem
+                        projectName="Woodworkers-lib"
+                        link="https://github.com/fxdave/woodworkers-lib"
+                        linkStyle={{
+                            animationDuration: "1s",
+                        }}
+                        date={<In month={new Date("2023-11-13")} />}
+                        skills={["OpenSCAD"]}
+                        description={
+                            <p>
+                                I'm not a woodworker myself, but I can make some cabinets for myself and I did it many times in the past.
+                                I made this lib to make it faster. I found it useful enought to share. So enjoy!
+                            </p>
+                        }
+                    />
+                    <SectionItem
+                        projectName="Cuple RPC"
+                        link="https://github.com/fxdave/cuple"
+                        linkStyle={{
+                            animationDuration: "1s",
+                        }}
+                        date={<In month={new Date("2023-07-31")} />}
+                        skills={["Typescript"]}
+                        description={
+                            <p>
+                                Typesharing between frontend and backends made easy.
+                                The missing type-safety for full-stack.
+                                An alternative to tRPC.
+                            </p>
+                        }
+                    />
+                    <SectionItem
+                        projectName="DavidHomeVentory"
+                        link="https://github.com/fxdave/DavidHomeVentory"
+                        linkStyle={{
+                            animationDuration: "1s",
+                        }}
+                        date={<In month={new Date("2022-12-21")} />}
+                        skills={["Typescript", "Cuple", "React", "Capacitor", "Docker"]}
+                        description={
+                            <p>
+                                Managing space in a small flat is always a big challange.
+                                I stick QR codes to boxes and I record every item atached to its id.
+                                This way I can pile the boxes up and I can search them with my phone easily.
+                            </p>
+                        }
+                    />
                     <SectionItem
                         projectName="ascii-snake-rs"
                         link="https://github.com/fxdave/ascii-snake-rs"
@@ -426,7 +509,7 @@ const App = () => (
                     />
                     <SectionItem
                         projectName="Vonal"
-                        link="https://github.com/vonal-project"
+                        link="https://github.com/fxdave/vonal-rust"
                         linkStyle={{
                             animationDuration: "1s",
                         }}
@@ -446,8 +529,8 @@ const App = () => (
                                 implemented fuzzy search with <code>Rust</code>{" "}
                                 and used <code>FFI</code> to call it from a
                                 react frontend. This way, I improved its
-                                performance hugely. Currently, I am rewriting
-                                this clearly with <code>Rust</code>.
+                                performance hugely. However I rewrote it in <code>Rust</code> completely.
+                                Currently, I am adding new features.
                             </p>
                         }
                     />
@@ -579,16 +662,15 @@ const App = () => (
                     <SkillCategories>
                         <SkillCategory title="Programming languages:">
                             <Skill level={10 / 10} title="JS" />
-                            <Skill level={10 / 10} title="TS" />
-                            <Skill level={10 / 10} title="PHP" />
-                            <Skill level={8 / 10} title="Python" />
+                            <Skill level={10 / 10} title="Typescript" />
                             <Skill level={8 / 10} title="Rust" />
+                            <Skill level={6 / 10} title="Python" />
+                            <Skill level={5 / 10} title="PHP" />
                             <Skill level={8 / 10} title="SQL" />
-                            <Skill level={5 / 10} title="GraphQL" />
                             <Skill level={8 / 10} title="Bash" />
-                            <Skill level={7 / 10} title="Elixir" />
-                            <Skill level={7 / 10} title="Java" />
-                            <Skill level={6 / 10} title="C++" />
+                            <Skill level={2 / 10} title="Elixir" />
+                            <Skill level={3 / 10} title="Java" />
+                            <Skill level={3 / 10} title="C++" />
                             <Skill level={5 / 10} title="C" />
                         </SkillCategory>
                         <SkillCategory title="Markup Languages:">
@@ -598,18 +680,18 @@ const App = () => (
                         </SkillCategory>
                         <SkillCategory title="Other:">
                             <Skill level={10 / 10} title="React" />
-                            <Skill level={9 / 10} title="VueJS" />
+                            <Skill level={2 / 10} title="VueJS" />
 
                             <Skill level={9 / 10} title="Mocha" />
                             <Skill level={9 / 10} title="Jest" />
 
                             <Skill level={10 / 10} title="NodeJS" />
-                            <Skill level={5 / 10} title="Apollo" />
+                            <Skill level={3 / 10} title="Apollo" />
 
-                            <Skill level={7 / 10} title="Laravel" />
-                            <Skill level={6 / 10} title="Django" />
+                            <Skill level={4 / 10} title="Laravel" />
+                            <Skill level={3 / 10} title="Django" />
                             <Skill level={5 / 10} title="Saleor" />
-                            <Skill level={7 / 10} title="Phoenix" />
+                            <Skill level={5 / 10} title="Phoenix" />
                             <Skill
                                 level={4 / 10}
                                 title="Neon bindings (Rust FFI)"
@@ -619,20 +701,28 @@ const App = () => (
                             <Skill level={6 / 10} title="Woocommerce" />
 
                             <Skill level={8 / 10} title="PostgreSQL" />
-                            <Skill level={5 / 10} title="MongoDB" />
+                            <Skill level={6 / 10} title="MongoDB" />
+                            <Skill level={7 / 10} title="Firestore" />
                             <Skill level={10 / 10} title="MySQL" />
 
-                            <Skill level={8 / 10} title="Bootstrap" />
+                            <Skill level={7 / 10} title="Shopify" />
+                            <Skill level={9 / 10} title="tRPC" />
+                            <Skill level={20 / 10} title="Cuple RPC" />
+                            <Skill level={7 / 10} title="Bootstrap" />
                             <Skill level={3 / 10} title="JQuery" />
+
                         </SkillCategory>
                         <SkillCategory title="DevOps:">
-                            <Skill level={5 / 10} title="CI/CD" />
-                            <Skill level={8 / 10} title="GNU" />
-                            <Skill level={8 / 10} title="Linux" />
+                            <Skill level={3 / 10} title="AWS" />
+                            <Skill level={6 / 10} title="Google Cloud" />
+                            <Skill level={6 / 10} title="CI/CD" />
+                            <Skill level={9 / 10} title="GNU" />
+                            <Skill level={9 / 10} title="Linux" />
                             <Skill
-                                level={8 / 10}
-                                title="Docker, docker-compose"
+                                level={9 / 10}
+                                title="Docker"
                             />
+                            <Skill level={1 / 10} title="Pulumi" />
                         </SkillCategory>
                         <SkillCategory title="Theory:">
                             <Skill
@@ -659,7 +749,7 @@ const App = () => (
                         <SkillCategory title="Human languages">
                             <Skill level={10 / 10} title="Hungarian" />
                             <Skill level={8 / 10} title="Written English" />
-                            <Skill level={4 / 10} title="Verbal English" />
+                            <Skill level={6 / 10} title="Verbal English" />
                         </SkillCategory>
                     </SkillCategories>
                 </Section>
