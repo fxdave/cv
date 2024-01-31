@@ -12,8 +12,11 @@ server.listen(3000, () => {
     console.log('Running at http://localhost:3000');
     (async () => {
     const browser = await puppeteer.launch();
+    console.log("puppeteer started");
     const page = await browser.newPage();
+    console.log("newPage created");
     await page.goto('http://localhost:3000/dist/', {waitUntil: 'load'});
+    console.log("url opened");
     await page.pdf({
         path: pdfPath, 
         format: 'A4',
@@ -26,8 +29,10 @@ server.listen(3000, () => {
         },
         preferCSSPageSize: true
     });
-    
+    console.log("pdf Saved");
     await browser.close();
+    console.log("browser closed");
     server.close();
+    console.log("server closed");
     })().catch(console.error);
 });
